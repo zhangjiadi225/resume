@@ -1,11 +1,12 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <h1>技术栈</h1>
+  <div>
+    <h1>技术栈</h1>
+    <h1>技术栈</h1>
+    <h1>技术栈</h1>
+    <h1>技术栈</h1>
+  </div>
 </template>
 
-<style>
-
-</style>
+<style></style>

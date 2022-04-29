@@ -1,11 +1,10 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <div class="main">
     <div class="my">
       <router-link to="/">HI I'm XXX</router-link>
-      </div>
+    </div>
     <div class="menu">
       <router-link class="item" to="/self">个人介绍</router-link>
       <router-link class="item" to="/experience">个人经历</router-link>
@@ -13,7 +12,11 @@
       <router-link class="item" to="/contact">联系方式</router-link>
     </div>
     <div class="show">
-       <router-view></router-view>
+      <router-view v-slot="{ Component  }">
+        <transition name="MainFade" mode="out-in">
+          <component :is="Component "></component>
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
@@ -60,7 +63,17 @@
     border-radius: 25px;
     padding-left: 20px;
     padding-top: 20px;
-    background-image: radial-gradient(#555555,#1e1f2a);
+    background-image: radial-gradient(#555555, #1e1f2a);
   }
+}
+.MainFade-enter-from, .MainFade-leave-to {
+  opacity: 0;
+}
+.MainFade-enter-to, .MainFade-leave-from {
+  opacity: 1;
+}
+.MainFade-enter-active,
+.MainFade-leave-active {
+  transition: opacity .5s;
 }
 </style>
