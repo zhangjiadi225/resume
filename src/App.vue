@@ -21,7 +21,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .main {
   width: 1200px;
   height: 700px;

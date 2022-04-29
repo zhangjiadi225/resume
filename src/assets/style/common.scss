@@ -2,6 +2,9 @@
 /* css common */
 html{ overflow: auto; }
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td{ margin: 0; padding: 0; }
+body{
+    overflow: hidden;
+}
 div, p{ word-break: break-all; }
 body{ background: #1e1f2a; font-size: 14px; font-family: Microsoft YaHei, Arial, Helvetica; color: #8d8e9b /* -moz-user-select: none; user-select: none;  *//*overflow:hidden;*/ }
 h1, h2, h3, h4, h5, h6{ font-weight: normal; font-size: 100%; }
