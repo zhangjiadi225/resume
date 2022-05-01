@@ -2,16 +2,17 @@
 
 <template>
   <div class="main">
-    <div class="my">
+    <div class="main-my">
       <router-link to="/">HI I'm XXX</router-link>
     </div>
-    <div class="menu">
-      <router-link class="item" to="/self">个人介绍</router-link>
-      <router-link class="item" to="/experience">个人经历</router-link>
-      <router-link class="item" to="/technology">技术栈</router-link>
-      <router-link class="item" to="/contact">联系方式</router-link>
+    <div class="main-menu">
+      <router-link class="main-menu-item" to="/"><img class="main-menu-home" src="./assets/image/home.svg" alt="#"></router-link>
+      <router-link class="main-menu-item" to="/self">个人介绍</router-link>
+      <router-link class="main-menu-item" to="/experience">个人经历</router-link>
+      <router-link class="main-menu-item" to="/technology">技术栈</router-link>
+      <router-link class="main-menu-item" to="/contact">联系方式</router-link>
     </div>
-    <div class="show">
+    <div class="main-show">
       <router-view v-slot="{ Component  }">
         <transition name="MainFade" mode="out-in">
           <component :is="Component "></component>
@@ -27,7 +28,8 @@
   height: 700px;
   position: relative;
   margin: 0 auto;
-  .my {
+
+  &-my {
     position: absolute;
     width: 400px;
     height: 400px;
@@ -35,7 +37,8 @@
     top: 50px;
     left: 20px;
   }
-  .menu {
+
+  &-menu {
     display: flex;
     position: absolute;
     bottom: 20px;
@@ -45,15 +48,29 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    .item {
+
+    &-item {
       color: #ffffff;
       height: 30px;
       margin-top: 10px;
       font-size: 18px;
       font-weight: 900;
     }
+
+    &-item:hover {
+      font-size: 25px;
+    }
+
+    &-home {
+      height: 30px;
+    }
+
+    &-home:hover {
+      height: 40px;
+    }
+
   }
-  .show {
+  &-show {
     position: absolute;
     right: 60px;
     top: 140px;
