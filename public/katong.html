@@ -1,35 +1,39 @@
-<style>
-    body {
-        background-color: #262335;
-        overflow: hidden;
-    }
+<!DOCTYPE html>
+<html lang="gbk">
+<head>
+    <style>
+        body {
+            background-color: #262335;
+            overflow: hidden;
+        }
 
-    section {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    .text {
-        position: relative;
-        color: wheat;
-        text-align: center;
-        margin: 40px;
-        max-width: 650px;
-    }
-    .text span {
-        position: relative;
-        display: inline-block;
-    }
-</style>
+        .text {
+            position: relative;
+            color: wheat;
+            text-align: center;
+            margin: 40px;
+            max-width: 650px;
+        }
+        .text span {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
 <body>
 <section>
     <p class="text">能用js实现的，终将用js实现。
     </p>
 </section>
-<script src="../../node_modules/animejs/lib//anime.min.js"></script>
+<script src="../node_modules/animejs/lib/anime.min.js"></script>
 <script>
     const text = document.querySelector('.text')
     text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>")
@@ -60,3 +64,4 @@
     })
 </script>
 </body>
+</html>

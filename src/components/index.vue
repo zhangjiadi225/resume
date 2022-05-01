@@ -11,7 +11,7 @@ const arr = reactive(['你不一定要很厲害，才能開始', '你要開始�
     </Describe>
     <div class="show">
       <iframe
-        src="http://127.0.0.1:5500/public/katong.html"
+        src="../../public/katong.html"
         style="width: 100%; height: 100%"
         scrolling="auto"
         frameborder="0"
